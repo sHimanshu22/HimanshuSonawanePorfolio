@@ -1,7 +1,11 @@
 import ThemeToggle from '../components/themeToggle'
 import StarBackGround from '../components/StarBackGround'
-
-
+import Navbar from '../components/Navbar'
+import HeroSection from '../components/HeroSection'
+import AboutMe from '../components/AboutMe'
+import { SkillsSection } from "@/components/SkillsSection";
+import { ProjectsSection } from '../components/ProjectSection'
+import { ContactSection } from '../components/contactSection'
 const Home = () => {
   return (
     <div className='min-h-screen bg-background text-foreground overflow-x-hidden'>
@@ -14,8 +18,17 @@ const Home = () => {
 
     
     {/* Navbar */}
+    <Navbar/>
 
     {/* Main Content */}
+    <main>
+      <HeroSection/>
+      <AboutMe/>
+      <SkillsSection/>
+      <ProjectsSection/>
+      <ContactSection/>
+
+    </main>
 
     {/* Footer */}
     </div>
