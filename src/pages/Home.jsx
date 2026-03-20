@@ -5,7 +5,7 @@ import HeroSection from '../components/HeroSection'
 import AboutMe from '../components/AboutMe'
 import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectsSection } from '../components/ProjectSection'
-import { ContactSection } from '../components/contactSection'
+import { ContactSection } from '../components/ContactSection.jsx'
 const Home = () => {
   return (
     <div className='min-h-screen bg-background text-foreground overflow-x-hidden'>
