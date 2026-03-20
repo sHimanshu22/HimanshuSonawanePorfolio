@@ -7,6 +7,7 @@ import {
   Send,
   Twitch,
   Twitter,
+  Github,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
@@ -44,9 +45,7 @@ export const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* LEFT SIDE */}
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
-              Contact Information
-            </h3>
+            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
             <div className="space-y-6">
               {/* Email */}
@@ -57,10 +56,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:himanshusonawane022@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@gmail.com
+                    himanshusonawane022@gmail.com
                   </a>
                 </div>
               </div>
@@ -73,10 +72,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Phone</h4>
                   <a
-                    href="tel:+11234567890"
+                    href="tel:+918208527003"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +1 (123) 456-7890
+                    +91 8208527003
                   </a>
                 </div>
               </div>
@@ -89,7 +88,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Location</h4>
                   <p className="text-muted-foreground">
-                    Vancouver, BC, Canada
+                    Pune, Maharastra, India
                   </p>
                 </div>
               </div>
@@ -99,17 +98,25 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/himanshusonawane022"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/sonawane5176" target="_blank" rel="noopener noreferrer">
                   <Twitter />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/s.himanshu45?igsh=cG1iMW1kZGsyOHY0" target="_blank" rel="noopener noreferrer">
                   <Instagram />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <Twitch />
+                <a
+                  href="https://github.com/sHimanshu22"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github />
                 </a>
               </div>
             </div>
@@ -133,7 +140,7 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  placeholder="Pedro Machado..."
+                  placeholder="Enter Your Name"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -151,7 +158,7 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  placeholder="john@gmail.com"
+                  placeholder="Enter Email"
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -178,7 +185,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2",
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

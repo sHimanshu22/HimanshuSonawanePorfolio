@@ -1,35 +1,37 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import WearxImage from "../../public/ProjectImages/WearX.png";
+import WorldAtlas from"../../public/ProjectImages/WorldAtlas.png"
 
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "WearX - Ecommerce Shop",
+    description: "Responsive ecommerce app with cart, payments, authentication, and admin panel.",
+    image: WearxImage,
+    tags: ["ReactJS", "TailwindCSS", "NodeJS","MongoDB" ,"Redux"],
+    demoUrl: "https://wearxstore.vercel.app/",
+    githubUrl: "https://github.com/sHimanshu22/WearX",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "WorldAtlas - Explore Nations",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Multi-page React application with routing, filtering, and Axios API integration",
+    image: WorldAtlas,
+    tags: ["React 19", "HTML", "CSS" , "JavaScript"],
+    demoUrl: "https://world-atlas-zeta-three.vercel.app/",
+    githubUrl: "https://github.com/sHimanshu22/WorldAtlas",
   },
-  {
-    id: 3,
-    title: "E-commerce Platform",
-    description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
+  // {
+  //   id: 3,
+  //   title: "E-commerce Platform",
+  //   description:
+  //     "Full-featured e-commerce platform with user authentication and payment processing.",
+  //   image: "/projects/project3.png",
+  //   tags: ["React", "Node.js", "Stripe"],
+  //   demoUrl: "#",
+  //   githubUrl: "#",
+  // },
 ];
 
 export const ProjectsSection = () => {
