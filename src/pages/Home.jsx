@@ -1,4 +1,4 @@
-import ThemeToggle from '../components/ThemeToggle'
+import ThemeToggle from '../components/ThemeToggle.jsx'
 import StarBackGround from '../components/StarBackGround'
 import Navbar from '../components/Navbar'
 import HeroSection from '../components/HeroSection'
