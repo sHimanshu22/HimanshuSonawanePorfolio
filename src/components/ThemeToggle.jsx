@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // Run only once when component mounts
   useEffect(() => {
