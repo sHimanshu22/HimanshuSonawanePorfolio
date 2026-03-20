@@ -1,14 +1,18 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import WearxImage from "../../public/ProjectImages/WearX.png";
-import WorldAtlas from"../../public/ProjectImages/WorldAtlas.png"
+import WorldAtlas from "../../public/ProjectImages/WorldAtlas.png";
+import URLShortner from "../../public/ProjectImages/URLShortner.png";
+import ImageUploade from "../../public/ProjectImages/ImageUploderPlatform.png"
+
 
 const projects = [
   {
     id: 1,
     title: "WearX - Ecommerce Shop",
-    description: "Responsive ecommerce app with cart, payments, authentication, and admin panel.",
+    description:
+      "Responsive ecommerce app with cart, payments, authentication, and admin panel.",
     image: WearxImage,
-    tags: ["ReactJS", "TailwindCSS", "NodeJS","MongoDB" ,"Redux"],
+    tags: ["ReactJS", "TailwindCSS", "NodeJS", "MongoDB", "Redux"],
     demoUrl: "https://wearxstore.vercel.app/",
     githubUrl: "https://github.com/sHimanshu22/WearX",
   },
@@ -18,20 +22,30 @@ const projects = [
     description:
       "Multi-page React application with routing, filtering, and Axios API integration",
     image: WorldAtlas,
-    tags: ["React 19", "HTML", "CSS" , "JavaScript"],
+    tags: ["React 19", "HTML", "CSS", "JavaScript"],
     demoUrl: "https://world-atlas-zeta-three.vercel.app/",
     githubUrl: "https://github.com/sHimanshu22/WorldAtlas",
   },
-  // {
-  //   id: 3,
-  //   title: "E-commerce Platform",
-  //   description:
-  //     "Full-featured e-commerce platform with user authentication and payment processing.",
-  //   image: "/projects/project3.png",
-  //   tags: ["React", "Node.js", "Stripe"],
-  //   demoUrl: "#",
-  //   githubUrl: "#",
-  // },
+  {
+    id: 3,
+    title: "URL Shortner Platform",
+    description:
+      "URL shortener generating short links and redirecting efficiently using Node.js, EJS and MongoDB for Storing links",
+    image: URLShortner,
+    tags: ["EJS", "Node.js", "MongoDB", "CSS"],
+    demoUrl: "https://urlshortner-1xqn.onrender.com",
+    githubUrl: "https://github.com/sHimanshu22/URLshortnerMain",
+  },
+  {
+    id: 4,
+    title: "Image Uploader",
+    description:
+      "Image Uploding platform Using Cloudinary for Storing Images with Backend In NodeJs",
+    image: ImageUploade,
+    tags: ["EJS", "Node.js", "MongoDB", "CSS", "Cloudinary"],
+    demoUrl: "https://image-uploader-c2la.onrender.com",
+    githubUrl: "https://github.com/sHimanshu22/ImageUploader",
+  },
 ];
 
 export const ProjectsSection = () => {
