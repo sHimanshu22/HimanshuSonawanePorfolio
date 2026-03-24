@@ -3,7 +3,7 @@ import WearxImage from "../../public/ProjectImages/WearX.png";
 import WorldAtlas from "../../public/ProjectImages/WorldAtlas.png";
 import URLShortner from "../../public/ProjectImages/URLShortner.png";
 import ImageUploade from "../../public/ProjectImages/ImageUploderPlatform.png"
-import AuthWithImage from "../../public/ProjectImages/AuthWithImage"
+import AuthWithImage from "../../public/ProjectImages/AuthWithImage.png"
 
 const projects = [
   {
