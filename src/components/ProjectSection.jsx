@@ -3,7 +3,7 @@ import WearxImage from "../../public/ProjectImages/WearX.png";
 import WorldAtlas from "../../public/ProjectImages/WorldAtlas.png";
 import URLShortner from "../../public/ProjectImages/URLShortner.png";
 import ImageUploade from "../../public/ProjectImages/ImageUploderPlatform.png"
-
+import AuthWithImage from "../../public/ProjectImages/AuthWithImage"
 
 const projects = [
   {
@@ -42,6 +42,16 @@ const projects = [
     description:
       "Image Uploding platform Using Cloudinary for Storing Images with Backend In NodeJs",
     image: ImageUploade,
+    tags: ["EJS", "Node.js", "MongoDB", "CSS", "Cloudinary"],
+    demoUrl: "https://image-uploader-c2la.onrender.com",
+    githubUrl: "https://github.com/sHimanshu22/ImageUploader",
+  },
+  {
+    id: 4,
+    title: "Auth With Image Upload",
+    description:
+      "Authentication with Image Uploding Using Cloudinary for Storing Images with Backend In NodeJs",
+    image: AuthWithImage,
     tags: ["EJS", "Node.js", "MongoDB", "CSS", "Cloudinary"],
     demoUrl: "https://image-uploader-c2la.onrender.com",
     githubUrl: "https://github.com/sHimanshu22/ImageUploader",
