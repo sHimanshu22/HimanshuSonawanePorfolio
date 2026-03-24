@@ -5,7 +5,6 @@ import {
   MapPin,
   Phone,
   Send,
-  Twitch,
   Twitter,
   Github,
 } from "lucide-react";
@@ -17,17 +16,38 @@ export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+    const formData = new FormData(e.target);
+
+    try {
+      const res = await fetch("https://formspree.io/f/mqeyozez", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
       });
-      setIsSubmitting(false);
-    }, 1500);
+
+      if (res.ok) {
+        toast({
+          title: "Message sent! 🚀",
+          description: "I'll get back to you soon.",
+        });
+        e.target.reset();
+      } else {
+        throw new Error("Failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Error ❌",
+        description: "Something went wrong. Try again.",
+      });
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -88,7 +108,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Location</h4>
                   <p className="text-muted-foreground">
-                    Pune, Maharastra, India
+                    Pune, Maharashtra, India
                   </p>
                 </div>
               </div>
@@ -105,10 +125,18 @@ export const ContactSection = () => {
                 >
                   <Linkedin />
                 </a>
-                <a href="https://x.com/sonawane5176" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://x.com/sonawane5176"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Twitter />
                 </a>
-                <a href="https://www.instagram.com/s.himanshu45?igsh=cG1iMW1kZGsyOHY0" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.instagram.com/s.himanshu45"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Instagram />
                 </a>
                 <a
@@ -127,12 +155,16 @@ export const ContactSection = () => {
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Hidden Subject */}
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Portfolio Message"
+              />
+
               {/* Name */}
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name
                 </label>
                 <input
@@ -147,10 +179,7 @@ export const ContactSection = () => {
 
               {/* Email */}
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Your Email
                 </label>
                 <input
@@ -185,7 +214,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2",
+                  "cosmic-button w-full flex items-center justify-center gap-2"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
