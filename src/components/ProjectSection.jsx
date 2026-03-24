@@ -24,7 +24,7 @@ const projects = [
     image: WorldAtlas,
     tags: ["React 19", "HTML", "CSS", "JavaScript"],
     demoUrl: "https://world-atlas-zeta-three.vercel.app/",
-    githubUrl: "https://github.com/sHimanshu22/WorldAtlas",
+    githubUrl: "https://github.com/sHimanshu22/AuthWithImage",
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const projects = [
       "Authentication with Image Uploding Using Cloudinary for Storing Images with Backend In NodeJs",
     image: AuthWithImage,
     tags: ["EJS", "Node.js", "MongoDB", "CSS", "Cloudinary"],
-    demoUrl: "https://image-uploader-c2la.onrender.com",
+    demoUrl: "https://authwithimage.onrender.com/",
     githubUrl: "https://github.com/sHimanshu22/ImageUploader",
   },
 ];
